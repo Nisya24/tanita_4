@@ -1,5 +1,17 @@
 import streamlit as st
 
+# BACKGROUND PINK
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FFC2D1;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # state tombol
 if "start" not in st.session_state:
     st.session_state.start = False
@@ -16,7 +28,7 @@ if not st.session_state.start:
 # setelah klik → code asli lo
 else:
     st.title('HAPPY BIRTHDAY TANITA')
-    st.write('Selamat hari lahir ya untuk my teman sahabat dari janin my forever blackpink member. Selamat sdh memulai hidup baru di tahun ini 💖')
+    st.write('Selamat hari lahir ya untuk my teman sahabat dari janin my forever blackpink member. Selamat sdh memulai hidup baru di tahun ke 20 ini, sering-sering ketemuan ya kita. Love you from melbin <3')
 
     slider_value = st.slider('Select a value', min_value=0, max_value=100, value=50)
 
