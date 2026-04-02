@@ -4,13 +4,16 @@ import streamlit as st
 if "start" not in st.session_state:
     st.session_state.start = False
 
-# tombol awal
+# tombol awal (CENTER)
 if not st.session_state.start:
-    if st.button("CLICK HERE"):
-        st.session_state.start = True
-        st.rerun()
+    col1, col2, col3 = st.columns([1,2,1])
 
-# setelah klik → baru tampil code asli lo
+    with col2:
+        if st.button("CLICK HERE"):
+            st.session_state.start = True
+            st.rerun()
+
+# setelah klik → code asli lo
 else:
     st.title('HAPPY BIRTHDAY TANITA')
     st.write('Selamat hari lahir ya untuk my teman sahabat dari janin my forever blackpink member. Selamat sdh memulai hidup baru di tahun ini 💖')
